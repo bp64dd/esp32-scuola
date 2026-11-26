@@ -1,4 +1,5 @@
 from machine import Pin
+import time
 
 led = Pin(2, Pin.OUT) # Led integrato del ESP32
 sensore = Pin(21, Pin.IN) # Sensore collegato al PIN 21
@@ -13,3 +14,4 @@ while True:
     else:
         led.value(1)
         print("Led acceso")
+    time.sleep(0.5)
